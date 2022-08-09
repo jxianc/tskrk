@@ -18,5 +18,5 @@ export default async function middleware(req: NextRequest) {
 
 // config with custom matcher
 export const config = {
-  matcher: '/api/redirect/:slug',
+  matcher: '/:slug',
 }
