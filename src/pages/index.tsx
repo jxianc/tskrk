@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes'
 
 const Home: NextPage = () => {
   const [mounted, setMounted] = useState(false)
-  const { theme, resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -69,20 +69,22 @@ const Home: NextPage = () => {
             </button>
           </a>
         </NextLink>
-        <button
-          aria-label="Toggle Dark Mode"
-          type="button"
-          className="p-2 bg-gray-200 dark:bg-zinc-700 hover:bg-gray-300 dark:hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black/90 focus:ring-gray-400 dark:focus:ring-gray-300 text-sm text-gray-700 dark:text-gray-100 font-medium rounded-[0.3rem]"
-          onClick={() => {
-            setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-          }}
-        >
-          {resolvedTheme === 'dark' ? (
-            <FaRegSun size={20} />
-          ) : (
-            <FaRegMoon size={20} />
-          )}
-        </button>
+        {mounted && (
+          <button
+            aria-label="Toggle Dark Mode"
+            type="button"
+            className="p-2 bg-gray-200 dark:bg-zinc-700 hover:bg-gray-300 dark:hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-black/90 focus:ring-gray-400 dark:focus:ring-gray-300 text-sm text-gray-700 dark:text-gray-100 font-medium rounded-[0.3rem]"
+            onClick={() => {
+              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+            }}
+          >
+            {resolvedTheme === 'dark' ? (
+              <FaRegSun size={20} />
+            ) : (
+              <FaRegMoon size={20} />
+            )}
+          </button>
+        )}
       </div>
     </div>
   )
