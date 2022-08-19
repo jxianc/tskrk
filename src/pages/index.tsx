@@ -1,11 +1,13 @@
 import { Form, Formik } from 'formik'
 import type { NextPage } from 'next'
 import { InputField } from '../components/InputField'
+import { FaGithub } from 'react-icons/fa'
+import NextLink from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col space-y-4 min-h-screen max-h-screen text-center items-center justify-center">
-      <div>
+    <div className="flex flex-col min-h-screen max-h-screen text-center items-center justify-center">
+      <div className="mb-4">
         <h1 className="font-bold text-xl">TSKRK</h1>
         <h2>a link shortener using customizable slug</h2>
       </div>
@@ -47,6 +49,18 @@ const Home: NextPage = () => {
           </Form>
         )}
       </Formik>
+      <div className="mt-12 space-x-4">
+        <NextLink href="https://github.com/jxianc/tskrk" passHref>
+          <a target="_blank">
+            <button className="p-2 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 text-sm text-gray-700 font-medium rounded-[0.3rem]">
+              <FaGithub size={25} />
+            </button>
+          </a>
+        </NextLink>
+        <button className="p-2 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 text-sm text-gray-700 font-medium rounded-[0.3rem]">
+          <FaGithub size={25} />
+        </button>
+      </div>
     </div>
   )
 }
