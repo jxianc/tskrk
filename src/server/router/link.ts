@@ -23,7 +23,7 @@ export const linkRouter = createRouter()
       }
     },
   })
-  .mutation('createLink', {
+  .mutation('shortenLink', {
     input: z.object({
       slug: z.string(),
       url: z.string(),
