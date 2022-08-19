@@ -2,11 +2,16 @@
 import { withTRPC } from '@trpc/next'
 import type { AppRouter } from '../server/router'
 import type { AppType } from 'next/dist/shared/lib/utils'
+import { ThemeProvider } from 'next-themes'
 import superjson from 'superjson'
 import '../styles/globals.css'
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider enableSystem attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 const getBaseUrl = () => {

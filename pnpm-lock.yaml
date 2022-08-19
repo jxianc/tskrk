@@ -14,6 +14,7 @@ specifiers:
   eslint-config-next: 12.2.3
   formik: ^2.2.9
   next: 12.2.3
+  next-themes: ^0.2.0
   postcss: ^8.4.14
   prisma: ^4.2.0
   react: 18.2.0
@@ -33,6 +34,7 @@ dependencies:
   '@trpc/server': 9.26.2
   formik: 2.2.9_react@18.2.0
   next: 12.2.3_biqbaboplfbrettd7655fr4n2y
+  next-themes: 0.2.0_53oqlnqnxhbetdy4ljlkkvmoby
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
@@ -1621,6 +1623,18 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-themes/0.2.0_53oqlnqnxhbetdy4ljlkkvmoby:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.2.3_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /next/12.2.3_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-TA0tmSA6Dk6S6kfvCNbF7CWYW8468gZUxr/3/30z4KvAQbXnl2ASYZElVe7q/hBW/1F1ee0tSBlHa4/sn+ZIBw==}

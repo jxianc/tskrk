@@ -28,13 +28,13 @@ export const InputField: React.FC<InputFieldProps & FieldAndForm> = ({
 
   return (
     <div className="flex items-center space-x-2">
-      <label className={cn(isPreviewLink ? 'text-blue-400' : 'text-black')}>
+      <label className={cn(isPreviewLink ? 'text-blue-400' : '')}>
         {label}
       </label>
       <input
         {...field}
         {...props}
-        className="w-full my-2 px-3 py-1 border-2 border-gray-200 placeholder-gray-400 focus:outline-none focus:border-gray-400  focus:z-10 text-sm rounded-[0.3rem]"
+        className="w-full my-2 px-3 py-1 bg-white dark:bg-zinc-700 border-2 border-gray-200 dark:border-zinc-500 placeholder-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-gray-300 focus:z-10 text-sm rounded-[0.3rem]"
       />
     </div>
   )
